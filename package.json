@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
+    "new-schematic-collection": "schematics blank --name=PutYourNewSchematicCollectionName",
     "component": "npm run build && schematics .:component --dry-run=false"
   },
   "keywords": [
