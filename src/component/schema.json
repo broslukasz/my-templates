@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "title": "Component Schema",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Component name",
+        "x-prompt": "Please type a name of your component"
+      }
+    },
+    "required": ["name"]
+  }
