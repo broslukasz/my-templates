@@ -6,6 +6,7 @@ import {
   move,
   Rule,
   SchematicContext,
+  strings,
   template,
   Tree,
   url
@@ -15,12 +16,20 @@ import { normalize } from 'path';
 export function generateComponent(_options: any): Rule {
   return async (_tree: Tree, _context: SchematicContext) => {
 
-    const movePath = normalize('output/components');
-    const templateSource = apply(url('./files'), [
-      template({..._options}),
-      move(movePath)
-    ]);
+    const movePath = normalize(`output/${strings.dasherize(_options.name)}`);
+    const templateSource = apply(
+      url('./files'),
+      [
+        template({
+          ..._options,
+          dasherize: strings.dasherize,
+          classify: strings.classify,
+        }),
+        move(movePath)
+      ]
+    );
 
-    return chain([mergeWith(templateSource, MergeStrategy.Overwrite)]);
+    return chain([
+      mergeWith(templateSource, MergeStrategy.Overwrite)]);
   };
 }

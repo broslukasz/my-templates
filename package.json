@@ -1,12 +1,12 @@
 {
   "name": "my-templates",
-  "version": "0.0.0",
-  "description": "A blank schematics",
+  "version": "1.0.0",
+  "description": "Schematics for generation templates",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
-    "new-schematic-collection": "schematics blank --name=PutYourNewSchematicCollectionName",
-    "component": "npm run build && schematics .:component --dry-run=false"
+    "generate-component": "npm run build && schematics .:component --dry-run=false",
+    "new-schematic-collection": "schematics blank --name=PutYourNewSchematicCollectionName"
   },
   "keywords": [
     "schematics"
