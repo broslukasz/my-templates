@@ -10,18 +10,12 @@ import {
   Tree,
   url
 } from '@angular-devkit/schematics';
-import { join, normalize } from 'path';
-
-export function setupOptions(host: Tree, options: any): Tree {
-  options.path = join(normalize('output/components'));
-  return host;
-}
+import { normalize } from 'path';
 
 export function generateComponent(_options: any): Rule {
-  return async (tree: Tree, _context: SchematicContext) => {
-    setupOptions(tree, _options);
+  return async (_tree: Tree, _context: SchematicContext) => {
 
-    const movePath = normalize(_options.path + '/');
+    const movePath = normalize('output/components');
     const templateSource = apply(url('./files'), [
       template({..._options}),
       move(movePath)
