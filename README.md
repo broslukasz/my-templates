@@ -1,7 +1,11 @@
-# Getting Started With Schematics
+# Enjoy with my usefull templates
+
+This schematics consists of following templates:
+- component - basic Angular standalone component with template, scss, spec (with component injected as provider)
+
+### Getting Started With Schematic
 
 This repository is a basic Schematic implementation that serves as a starting point to create and publish Schematics to NPM.
-
 ### Testing
 
 To test locally, install `@angular-devkit/schematics-cli` globally and use the `schematics` command line tool. That tool acts the same as the `generate` command of the Angular CLI, but also has a debug mode.
