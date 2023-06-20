@@ -6,7 +6,11 @@
       "name": {
         "type": "string",
         "description": "Component name",
-        "x-prompt": "Please type a name of your component"
+        "x-prompt": "Please type a name of your component",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        }
       }
     },
     "required": ["name"]
