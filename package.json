@@ -4,6 +4,7 @@
   "description": "Schematics for generation templates",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json --watch",
     "test": "npm run build && jasmine src/**/*_spec.js",
     "generate-component": "npm run build && schematics .:component --dry-run=false",
     "new-schematic-collection": "schematics blank --name=PutYourNewSchematicCollectionName"
