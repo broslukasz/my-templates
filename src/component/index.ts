@@ -14,8 +14,8 @@ import {
 import { normalize } from 'path';
 
 export function generateComponent(_options: any): Rule {
+  
   return async (_tree: Tree, _context: SchematicContext) => {
-
     const movePath = normalize(`output/${strings.dasherize(_options.name)}`);
     const templateSource = apply(
       url('./files'),

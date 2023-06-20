@@ -1,16 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
-import { <%= classify(name) %> } from './<%= dasherize(name)%>.component';
+import { <%= classify(name) %>Component } from './<%= dasherize(name)%>.component';
 
-describe(<%= classify(name) %>.name, () => {
-  let component: <%= classify(name) %>;
+describe(<%= classify(name) %>Component.name, () => {
+  let component: <%= classify(name) %>Component;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      providers: [<%= classify(name) %>],
+      providers: [<%= classify(name) %>Component],
     }).compileComponents();
 
-    component = TestBed.inject(<%= classify(name) %>);
+    component = TestBed.inject(<%= classify(name) %>Component);
   });
 
   it('should create', () => {
