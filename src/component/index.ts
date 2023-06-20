@@ -12,8 +12,9 @@ import {
   url
 } from '@angular-devkit/schematics';
 import { normalize } from 'path';
+import { Schema } from './schema';
 
-export function generateComponent(_options: any): Rule {
+export function generateComponent(_options: Schema): Rule {
   
   return async (_tree: Tree, _context: SchematicContext) => {
     const movePath = normalize(`output/${strings.dasherize(_options.name)}`);
