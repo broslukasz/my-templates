@@ -6,7 +6,8 @@ This schematics consists of following templates:
 ### How to use this app
 
 - Download this repo to any catalogue
-- Run a command form package.json that generates a component
+- run `npm build`
+- Run `generate-component` command form package.json
 
 ### How to use this app in an existing project
 
