@@ -2,7 +2,7 @@
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
     "component": {
-      "description": "A blank schematic.",
+      "description": "A schamatic for component generation from a custom template",
       "factory": "./component/index#generateComponent",
       "schema": "./component/schema.json"
     }
